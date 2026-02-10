@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ライフウェア事業部 | 伝統と機能性の融合</title>
+    <!-- Tailwind CSS (via CDN for quick prototype without Node.js) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Noto Serif JP"', 'serif'],
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-navy': '#0f172a', // Deep Navy
+                        'brand-gold': '#fbbf24', // Amber/Gold accent
+                        'brand-highlight': '#b91c1c', // Deep Red for accents
+                        'brand-beige': '#f5f5f4', // Warm stone/beige
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1598555232815-54625b0f49c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')", // Temporarily using Unsplash for Kimono/Fabric texture
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-brand-beige text-gray-800 antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-wider text-brand-navy serif">Life Wear Division</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-brand-navy font-medium transition">コンセプト</a>
+                <a href="#services" class="text-gray-700 hover:text-brand-navy font-medium transition">事業内容</a>
+                <a href="#contact" class="px-6 py-2 bg-brand-navy text-white rounded-full hover:bg-opacity-90 transition shadow-lg">お問い合わせ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-brand-navy overflow-hidden">
+        <!-- Background Image overlay -->
+        <div class="absolute inset-0 z-0">
+             <!-- Placeholder images will be replaced with generated assets later. Using a solid color gradient for now over a subtle pattern -->
+             <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/90 to-brand-navy/40 z-10"></div>
+             <img src="https://images.unsplash.com/photo-1622359578297-f5dc8325dc4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fabric Texture" class="w-full h-full object-cover grayscale opacity-30 mix-blend-overlay">
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-20 text-center text-white">
+            <p class="text-lg md:text-xl tracking-[0.2em] mb-4 text-brand-gold animate-fade-in-up">伝統を纏い、機能を活かす</p>
+            <div class="inline-block relative">
+                <h2 class="text-5xl md:text-7xl font-bold serif mb-6 leading-tight animate-fade-in-up delay-100">
+                    Life Wear<br>Division
+                </h2>
+                <div class="absolute -right-4 -top-4 w-12 h-12 border-t-2 border-r-2 border-brand-gold opacity-50"></div>
+                <div class="absolute -left-4 -bottom-4 w-12 h-12 border-b-2 border-l-2 border-brand-gold opacity-50"></div>
+            </div>
+            
+            <p class="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto opacity-90 animate-fade-in-up delay-200">
+                作業服、スーツ、イベント衣装、そして男性用着物。<br>
+                あらゆるシーンで、あなたを輝かせる一着を。
+            </p>
+            
+            <a href="#services" class="inline-block px-10 py-4 border border-white text-white hover:bg-white hover:text-brand-navy transition duration-300 tracking-widest serif animate-fade-in-up delay-300">
+                詳しく見る
+            </a>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce text-white/50">
+            <span class="text-xs tracking-widest mb-2">SCROLL</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-beige rounded-full z-0"></div>
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Process" class="relative z-10 w-full h-[500px] object-cover shadow-2xl grayscale hover:grayscale-0 transition duration-700">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-brand-gold font-bold tracking-widest mb-2 text-sm uppercase">Concept</h3>
+                    <h2 class="text-4xl font-bold text-brand-navy serif mb-6 leading-snug">
+                        歴史ある技術と<br>現代のニーズの調和
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        私たちは長年培ってきた着物の伝統技術を基盤に、現代社会で求められる機能性と美しさを追求しています。
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        ビジネスシーンでの信頼感を演出するスーツ、現場でのパフォーマンスを高める作業服、そして特別な日のための衣装。<br>
+                        それぞれのシーンに最適な「装い」をご提案します。
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l-2 border-brand-highlight pl-4">
+                            <h4 class="text-xl font-bold text-brand-navy serif mb-2">Quality</h4>
+                            <p class="text-sm text-gray-500">厳選された素材と熟練の縫製技術</p>
+                        </div>
+                        <div class="border-l-2 border-brand-highlight pl-4">
+                            <h4 class="text-xl font-bold text-brand-navy serif mb-2">Tailored</h4>
+                            <p class="text-sm text-gray-500">一人ひとりに合わせた最適なフィッティング</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-brand-beige">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-brand-gold font-bold tracking-widest mb-2 text-sm uppercase">Our Services</h3>
+                <h2 class="text-4xl font-bold text-brand-navy serif mb-4">事業展開</h2>
+                <div class="w-20 h-1 bg-brand-navy mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1: Workwear -->
+                <div class="group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="作業服・制服" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-brand-navy bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
+                    </div>
+                    <div class="p-8 relative">
+                        <div class="absolute -top-6 right-6 bg-brand-navy text-white w-12 h-12 flex items-center justify-center font-bold text-xl serif shadow-lg">01</div>
+                        <h4 class="text-xl font-bold text-brand-navy serif mb-3">作業服・制服</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            機能性と耐久性を兼ね備えた、プロフェッショナルのためのワークウェア。企業のアイデンティティを表現します。
+                        </p>
+                        <a href="#" class="text-brand-highlight font-bold text-sm tracking-wide hover:underline flex items-center">
+                            MORE <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Suits -->
+                <div class="group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                         <img src="https://images.unsplash.com/photo-1543132220-4441b435337b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="スーツ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                         <div class="absolute inset-0 bg-brand-navy bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
+                    </div>
+                    <div class="p-8 relative">
+                        <div class="absolute -top-6 right-6 bg-brand-navy text-white w-12 h-12 flex items-center justify-center font-bold text-xl serif shadow-lg">02</div>
+                        <h4 class="text-xl font-bold text-brand-navy serif mb-3">スーツ</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            ビジネスシーンに品格を。上質な素材とこだわりの縫製技術で、自信を与える一着を仕立てます。
+                        </p>
+                         <a href="#" class="text-brand-highlight font-bold text-sm tracking-wide hover:underline flex items-center">
+                            MORE <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Event Costumes -->
+                <div class="group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="イベント衣装" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-brand-navy bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
+                    </div>
+                    <div class="p-8 relative">
+                         <div class="absolute -top-6 right-6 bg-brand-navy text-white w-12 h-12 flex items-center justify-center font-bold text-xl serif shadow-lg">03</div>
+                        <h4 class="text-xl font-bold text-brand-navy serif mb-3">イベント衣装</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            非日常を創り出す、特別な装い。伝統的な意匠から現代的なデザインまで、イベントのコンセプトに合わせて制作します。
+                        </p>
+                         <a href="#" class="text-brand-highlight font-bold text-sm tracking-wide hover:underline flex items-center">
+                            MORE <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Men's Kimono -->
+                <div class="group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1627931329686-21ce9e897987?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="男性用着物" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-brand-navy bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
+                    </div>
+                    <div class="p-8 relative">
+                         <div class="absolute -top-6 right-6 bg-brand-navy text-white w-12 h-12 flex items-center justify-center font-bold text-xl serif shadow-lg">04</div>
+                        <h4 class="text-xl font-bold text-brand-navy serif mb-3">男性用着物</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            男を上げる、本物の着物。正絹の風合い、渋い色合い。大人の嗜みとしての着物をご提案します。
+                        </p>
+                         <a href="#" class="text-brand-highlight font-bold text-sm tracking-wide hover:underline flex items-center">
+                            MORE <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax / Divider -->
+    <section class="py-24 bg-brand-navy bg-fixed bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-brand-navy bg-opacity-80"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white serif mb-8 leading-tight">
+                「装い」を変えれば、<br>「世界」が変わる。
+            </h2>
+            <p class="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
+                あなたのビジネスや生活に、新しい価値を。<br>
+                まずは一度、ご相談ください。
+            </p>
+            <a href="#contact" class="inline-block px-10 py-4 bg-brand-gold text-brand-navy font-bold hover:bg-white transition duration-300 rounded shadow-lg">
+                お問い合わせはこちら
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16">
+                <h3 class="text-brand-gold font-bold tracking-widest mb-2 text-sm uppercase">Contact</h3>
+                <h2 class="text-4xl font-bold text-brand-navy serif mb-4">お問い合わせ</h2>
+                <p class="text-gray-600">お見積りやご相談など、お気軽にお問い合わせください。</p>
+            </div>
+            
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">お名前 <span class="text-red-500">*</span></label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-navy focus:ring-1 focus:ring-brand-navy outline-none transition" placeholder="山田 太郎">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">メールアドレス <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-navy focus:ring-1 focus:ring-brand-navy outline-none transition" placeholder="example@email.com">
+                    </div>
+                </div>
+                <div>
+                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">お問い合わせ項目</label>
+                    <select id="subject" name="subject" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-navy focus:ring-1 focus:ring-brand-navy outline-none transition">
+                        <option>作業服・制服について</option>
+                        <option>スーツについて</option>
+                        <option>イベント衣装について</option>
+                        <option>男性用着物について</option>
+                        <option>その他</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">お問い合わせ内容 <span class="text-red-500">*</span></label>
+                    <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-brand-navy focus:ring-1 focus:ring-brand-navy outline-none transition" placeholder="お問い合わせ内容をご記入ください"></textarea>
+                </div>
+                <div class="text-center pt-6">
+                    <button type="button" class="px-12 py-4 bg-brand-navy text-white font-bold rounded hover:bg-opacity-90 transition shadow-lg transform hover:-translate-y-1">
+                        送信する
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-navy text-white py-12 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <h2 class="text-2xl font-bold serif mb-2">Life Wear Division</h2>
+                    <p class="text-sm text-gray-400">株式会社 市原呉服店（仮）</p>
+                </div>
+                <div class="flex space-x-6 text-sm text-gray-400">
+                    <a href="#" class="hover:text-white transition">プライバシーポリシー</a>
+                    <a href="#" class="hover:text-white transition">特定商取引法に基づく表記</a>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-xs text-gray-500">
+                &copy; 2026 Life Wear Division. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
